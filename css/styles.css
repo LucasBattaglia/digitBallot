@@ -1,1 +1,64 @@
-@import url("reset.css");
+@import url("normalize.css");
+
+/*
+Remise dans l'ordre voulu des elements html
+ */
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+header{
+    order:1;
+}
+nav{
+    order:2;
+}
+main{
+    order:3;
+}
+footer{
+    order:4;
+}
+
+/* html */
+html{
+    background-color: black;
+}
+
+/* header */
+body>header{
+    display: block;
+    background-image: radial-gradient(circle, #a1e821, #266c12);
+    justify-content: center;
+    align-content: center;
+    margin: 2px 5px 10px 5px;
+    border-radius: 10px;
+    text-align: left;
+    padding: 12px;
+}
+
+
+body>header div{
+    display: block;
+    text-align: center;
+    margin-top: -50px;
+}
+
+body>header img{
+    width: 50px;
+    height: 50px;
+}
+
+body>header h1{
+    display: inline;
+    text-align: center;
+}
+
+body>header a{
+    display: inline;
+}
+
+p, h2, h3, td, th, tr, address, .mention{
+    color: yellow;
+}
