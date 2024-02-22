@@ -1,0 +1,278 @@
+@import url("normalize.css");
+
+/************ Remise dans l'ordre voulu des elements html ************/
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    order: 1;
+}
+
+nav {
+    order: 2;
+}
+
+main {
+    order: 3;
+}
+
+footer {
+    order: 4;
+}
+
+/************ Partout ************/
+html {
+    background-color: rgb(245, 245, 245);
+}
+
+p {
+    min-width: 15em;
+    max-width: 80em;
+}
+
+/************ header ************/
+body > header {
+    display: block;
+    background-color: rgb(75, 145, 35);
+    justify-content: center;
+    align-content: center;
+    text-align: left;
+    padding: 10px;
+}
+
+
+body > header div {
+    display: block;
+    text-align: center;
+    margin-top: -50px;
+}
+
+body > header img {
+    width: 50px;
+    height: 50px;
+}
+
+body > header h1 {
+    display: inline;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-variant: small-caps;
+    font-family: cursive;
+}
+
+body > header a {
+    text-decoration: none;
+}
+
+body > header a {
+    display: inline;
+}
+
+/************ nav ************/
+
+body > nav a {
+    transition: filter 300ms;
+}
+
+
+/*body>nav:has(a:hover) a:not(:hover),
+body>nav:has(a:focus) a:not(:focus){
+    filter: grayscale(100%) brightness(50%);
+}
+
+body>nav:has(a:hover) a:hover,
+body>nav:has(a:focus) a:focus{
+    text-decoration: underline;
+}*/
+
+body > nav:hover a,
+body > nav:focus a{
+    color: black;
+}
+
+body > nav:hover a:hover,
+
+body > nav a {
+    text-decoration: none;
+    color: blue;
+}
+
+body > nav:has(a:focus) a {
+    color: black;
+}
+
+body > nav:has(a:focus) a:focus {
+    outline: none;
+    color: blue;
+}
+
+body > nav a:current {
+    text-decoration: underline;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+}
+
+nav li{
+    padding: 10px;
+}
+
+/************ main Page Activite ************/
+body > main {
+    display: flex;
+}
+
+body > main > section {
+    margin: 10px;
+    border-radius: 5px;
+    width: 75vw;
+}
+
+body > main > section header div{
+    display: flex;
+    justify-content: center;
+}
+
+body > main > section header a{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: rgb(75, 145, 35);
+    color: white;
+    text-decoration: none;
+    translate: 0% 50%;
+}
+
+.more {
+    display: flex;
+    border-top: 1px solid rgb(229, 231, 235);
+    justify-content: space-between;
+    flex-flow: row wrap;
+}
+
+.more article {
+    padding: 20px;
+}
+
+main header, .Corps {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 3px 15px rgb(0, 0, 0);
+    padding: 10px;
+    margin: 20px;
+}
+
+main footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+body > main > aside > nav {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 20vw;
+}
+
+body > main > aside {
+    background-color: rgb(225, 214, 91);
+    border-radius: 5px;
+    margin: 30px 10px 10px 10px;
+    align-items: stretch;
+    height: auto;
+    width: 20vw;
+    box-shadow: 0px 3px 15px rgb(0, 0, 0);
+}
+
+/************ main Autre Page ************/
+
+body > main > article {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    box-shadow: 0px 3px 15px rgb(0, 0, 0);
+    padding: 10px;
+    margin: 20px;
+}
+
+/*********** footer *************/
+
+body > footer {
+    background-color: rgb(233, 234, 249);
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+body > footer * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+body > footer img {
+    height: 50px;
+    width: 50px;
+}
+
+body > footer address {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/************* tableau ***********/
+
+table caption {
+    visibility: hidden;
+}
+
+thead {
+    background-color: aqua;
+}
+
+@media print {
+    /* Styles spécifiques pour l'impression */
+    body {
+        background: white;
+        font-size: 12pt;
+    }
+
+    nav, aside {
+        display: none;
+    }
+
+    body > footer, section > footer {
+        display: none;
+    }
+
+    main header, main section > main {
+        border: none;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    body > header {
+        display: none;
+    }
+
+    p em {
+        display: inline;
+    }
+
+    .more span{
+        display: none;
+    }
+
+
+}
+
