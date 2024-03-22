@@ -4,6 +4,10 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
     <!--<meta http-equiv="content-language" content="fr" />
     <meta charset="utf-8" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0">
+
 
     <meta name="author" content="Lucas BATTAGLIA"/>
     <meta name="keywords" content="Jeux,Scout,Animation"/>
@@ -11,7 +15,7 @@
           content="Cette page du site NAME SITE represente l'ensemble des donnees d'une activité pour animer vos sorties"/>
 
     <link rel="stylesheet" href="css/styles.css"/>
-
+    <link rel="icon" href="/img/logo.png">
     <title>NAME SITE</title>
 </head>
 <body>
@@ -81,6 +85,24 @@
             </table>
         </section>
     </article>
+    <aside>
+        <div id="messageLog"></div>
+        <form action="htbin/login.py" method="post" id="connexion">
+            <fieldset>
+                <legend>Connexion</legend>
+
+                <label for="username">Nom d'utilisateur : </label>
+                <input name="username" id="username" type="text" required/>
+
+                <label for="userpwd">Mots de passe : <span class="material-symbols-outlined right" id="visibility-pwd">visibility</span></label>
+                <input name="userpwd" id="userpwd" type="password" required/>
+            </fieldset>
+            <input type="submit" value="Connexion">
+            Pas encore de compte ? <br> <a href="form.html">Cree en un</a>
+        </form>
+        <p id="connect">Lien vers la chatbox : <a href="chat.html"> ChatBox du site </a><br>
+            Changer de compte : <a href="#" id="retour"> retour </a><br>
+    </aside>
 </main>
 <header>
     <a href="index.html">
@@ -119,5 +141,7 @@
         <a href="jeux/Sagamore.html">Sagamore</a>
     </nav>
 </footer>
+
+<script src="js/Formulaire.js" defer></script>
 </body>
 </html>

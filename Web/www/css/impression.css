@@ -1,0 +1,96 @@
+/*@import url("normalize.css");*/
+
+
+/* Styles spécifiques pour l'impression */
+body {
+    background: white;
+    font-family: Arial, serif;
+    font-size: 1em;
+    padding: 0.084%;
+}
+
+h2 {
+    color: rgb(0, 102, 153);
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    font-style: normal;
+    font-weight: normal;
+}
+
+main header {
+    text-align: center;
+}
+
+main header h3 {
+    display: none;
+}
+
+main header .more {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main header .more:only-child {
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main header .more h3 {
+    display: flex;
+}
+
+main header article h3#Objectif + p {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    color: rgb(124, 199, 36);
+}
+
+main header article:has(#ButDuJeu) p {
+    font-size: 0.75em;
+    font-style: italic;
+    color: blue;
+}
+
+article:has(#ButDuJeu) p::before {
+    content: '"';
+}
+
+article:has(#ButDuJeu) p::after {
+    content: '"';
+}
+
+nav, aside {
+    display: none;
+}
+
+.more {
+    display: flex !important;
+}
+
+.more span {
+    display: none;
+}
+
+article {
+    page-break-inside: avoid;
+}
+
+body > footer, section > footer {
+    display: none;
+}
+
+main header, .Corps {
+    border: none;
+    box-shadow: none;
+    width: 100%;
+}
+
+body > header {
+    display: none;
+}
+
+p em {
+    display: inline;
+}

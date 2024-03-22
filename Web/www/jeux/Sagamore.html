@@ -4,20 +4,22 @@
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
     <!--<meta http-equiv="content-language" content="fr" />
     <meta charset="utf-8" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 
     <meta name="author" content="Lucas BATTAGLIA"/>
     <meta name="keywords" content="Jeux,Scout,Animation"/>
     <meta name="description"
           content="Cette page du site NAME SITE represente l'ensemble des donnees d'une activité pour animer vos sorties"/>
 
-    <link rel="stylesheet" href="../css/styles.css"/>
+    <link id="mainStylesheet" rel="stylesheet" href="../css/styles.css"/>
 
     <link rel="icon" href="/img/logo.png">
     <title>NAME SITE</title>
 </head>
 <body>
 <main>
-    <section>
+    <section id="jeux">
         <header>
             <h2>Le Sagamore</h2>
             <article>
@@ -87,13 +89,9 @@
     </section>
     <aside>
         <nav>
-            <a href="#Objectif">Objectif Pedagogique</a>
-            <a href="#ButDuJeu">But Du Jeu</a>
-            <a href="#Age">Age</a>
-            <a href="#Effectif">Effectif</a>
-            <a href="#Materiel">Materiel</a>
-            <a href="#Orga">Organisation</a>
-            <a href="#Regle">Regle Du Jeu</a>
+            <ul id="sommaire">
+                <!-- Sommaire Generer par JavaScript -->
+            </ul>
         </nav>
     </aside>
 </main>
@@ -134,7 +132,6 @@
         <a href="catchFlag.html">Catch Flags (capture de drapeau)</a>
     </nav>
 </footer>
-
 
 
 <script src="../js/script.js" defer></script>

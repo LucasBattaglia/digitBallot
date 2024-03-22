@@ -38,5 +38,5 @@ elif not 'userpwd' in form_data:
 elif form_data['username'] == data['username'] and form_data['userpwd'] == data['userpwd']:
 	print(("Bonjour %s %s !" % (data['firstname'], data['lastname'])))
 else:
-	print('Le nom d\'utilisateur et le mot de pass sont invalides.')
+	print('Le nom d\'utilisateur et le mot de passe sont invalides.')
 
