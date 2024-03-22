@@ -70,3 +70,8 @@
 {"date": "18/03/24", "time": "13:36", "user": "lubattagli", "msg": "azerty"}
 {"date": "18/03/24", "time": "13:36", "user": "lubattagli", "msg": "a"}
 {"date": "18/03/24", "time": "13:36", "user": "lubattagli", "msg": "a"}
+{"date": "22/03/24", "time": "17:30", "user": "lubattagli", "msg": "gfv\n\nfd"}
+{"date": "22/03/24", "time": "17:31", "user": "lubattagli", "msg": "<scritp>alert(\"Une erreur s'est produite lors de la requ\u00eate.\");</script>"}
+{"date": "22/03/24", "time": "17:32", "user": "lubattagli", "msg": "<script>\n        console.error(\"Bonjour ! Ceci est un message d'alerte JavaScript !\");\n    </script>"}
+{"date": "22/03/24", "time": "17:32", "user": "lubattagli", "msg": "<script>\n        alert(\"Bonjour ! Ceci est un message d'alerte JavaScript !\");\n    </script>"}
+{"date": "22/03/24", "time": "17:34", "user": "lubattagli", "msg": "<script>\n        // Votre code JavaScript ici\n        console.log(\"Bonjour ! Ceci est un message d'alerte JavaScript !\");\n    </script>"}

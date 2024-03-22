@@ -17,18 +17,23 @@
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --fond: rgb(10 10 10);
-        --section-fond: rgb(0 0 0);
-        --vert: rgb(75, 145, 35);
-        --bleu: rgb(0, 0, 255);
-        --couleur-lien: rgb(255, 0, 0);
-        --defaut: rgb(255, 255, 255);
-        --gris: rgb(229, 231, 235);
-        --aside: rgb(98, 90, 3);
-        --footer: rgb(15, 21, 117);
-        --thead: rgb(0 155 155);
+        --fond: rgb(20, 20, 20);
+        --section-fond: rgb(30, 30, 30);
+        --vert: rgb(34, 139, 34);
+        --bleu: rgb(70, 130, 180);
+        --couleur-lien: rgb(255, 100, 100);
+        --defaut: rgb(200, 200, 200);
+        --gris: rgb(100, 100, 100);
+        --aside: rgb(128, 128, 0);
+        --footer: rgb(25, 25, 112);
+        --thead: rgb(0, 139, 139);
+    }
+
+    aside a {
+        color: rgb(255, 255, 255); /* Couleur des liens dans l'élément aside */
     }
 }
+
 
 /************ Remise dans l'ordre voulu des elements html ************/
 

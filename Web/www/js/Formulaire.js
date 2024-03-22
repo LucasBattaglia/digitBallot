@@ -49,6 +49,11 @@ inputs.forEach(function (input) {
     });
 });
 
+/**
+ * Fonction pour la validité de la date de naissance
+ * @param dateString Date a valider
+ * @returns {boolean} True si la date est autoriser, False sinon
+ */
 function isValidDate(dateString) {
     var regEx = /^\d{2}\/\d{2}\/\d{4}$/;
     if (!dateString.match(regEx)) return false;
@@ -74,15 +79,23 @@ function isValidPassword(password) {
     return regEx.test(password);
 }
 
-// Fonction pour vérifier la validité de l'adresse email
+/**
+ * Fonction pour la validité de l'adresse mail
+ * @param email adresse mail a valider
+ * @returns {boolean} True si l'adresse est autoriser, False sinon
+ */
 function isValidEmail(email) {
     // Regex pour vérifier l'adresse email
     var regEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return regEx.test(email);
 }
 
-// Fonction pour valider le formulaire
+/**
+ * Fonction verifiant que chaque champs du formulaire soit correctement remplis
+ * @returns {boolean} True si tout les champs du formulaire sont correctement remplis, False sinon
+ */
 function validateForm() {
+    // On recupere les diferente valeur des champs du formulaire
     var nom = document.getElementById('lastname').value;
     var prenom = document.getElementById('firstname').value;
     var dateNaissance = document.getElementById('birthdate').value;
@@ -90,21 +103,23 @@ function validateForm() {
     var password = document.getElementById('userpwd').value;
     var email = document.getElementById('useremail').value;
 
+    // booleen permettant de savoir si le formulaire est valide
     var isValid = true;
 
-    // Vérification du nom et prénom
+    // Vérification du nom
     var lastnameSpan = document.getElementById('lastnameSpan');
     if (nom.trim() === '') {
-        // Afficher message d'erreur pour nom et prénom
+        // Afficher message d'erreur pour nom
         isValid = false;
         lastnameSpan.textContent = "Ce champs ne peut etre vide";
     } else {
         lastnameSpan.textContent = "";
     }
 
+    // Vérification du prenom
     var firstnameSpan = document.getElementById('firstnameSpan');
     if (prenom.trim() === '') {
-        // Afficher message d'erreur pour nom et prénom
+        // Afficher message d'erreur pour prénom
         isValid = false;
         firstnameSpan.textContent = "Ce champs ne peut etre vide";
     } else {
