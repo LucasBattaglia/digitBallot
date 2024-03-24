@@ -2,95 +2,131 @@
 
 
 /* Styles spécifiques pour l'impression */
-body {
-    background: white;
-    font-family: Arial, serif;
-    font-size: 1em;
-    padding: 0.084%;
-}
+@media print {
+    body {
+        background: white;
+        font-family: Arial, serif;
+        font-size: 1em;
+        padding: 0.084%;
+    }
 
-h2 {
-    color: rgb(0, 102, 153);
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    font-style: normal;
-    font-weight: normal;
-}
+    h2 {
+        color: rgb(0, 102, 153);
+        font-size: 2em;
+        text-transform: uppercase;
+        font-style: normal;
+        font-weight: normal;
+    }
 
-main header {
-    text-align: center;
-}
+    /*article:has(#Objectif){
+        order:1;
+    }
 
-main header h3 {
-    display: none;
-}
+    article:has(#ButDuJeu){
+        order:3;
+    }
 
-main header .more {
-    text-align: left;
-    display: flex;
-    flex-wrap: wrap;
-}
+    .more{
+        order:2;
+    }*/
 
-main header .more:only-child {
-    text-align: left;
-    display: flex;
-    flex-wrap: wrap;
-}
+    .Corps h3{
+        color: rgb(0, 102, 153);
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.5em;
+    }
 
-main header .more h3 {
-    display: flex;
-}
+    main header {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
 
-main header article h3#Objectif + p {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    color: rgb(124, 199, 36);
-}
+    main header h3 {
+        display: none;
+    }
 
-main header article:has(#ButDuJeu) p {
-    font-size: 0.75em;
-    font-style: italic;
-    color: blue;
-}
+    main header .more {
+        text-align: left;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        border: .5px solid grey;
+    }
 
-article:has(#ButDuJeu) p::before {
-    content: '"';
-}
+    main header .more:only-child {
+        text-align: left;
+        display: flex;
+        align-items: center;
+        justify-items: center;
+        flex-wrap: wrap;
+    }
 
-article:has(#ButDuJeu) p::after {
-    content: '"';
-}
+    .more > * {
+        width:auto;
+    }
 
-nav, aside {
-    display: none;
-}
+    main header .more h3 {
+        display: flex;
+    }
 
-.more {
-    display: flex !important;
-}
+    main header article h3#Objectif + p {
+        text-transform: uppercase;
+        font-size: 1.8em;
+        color: rgb(124, 199, 36);
+    }
 
-.more span {
-    display: none;
-}
+    main header article:has(#ButDuJeu) p {
+        font-size: 1.5em;
+        font-style: italic;
+        color: blue;
+    }
 
-article {
-    page-break-inside: avoid;
-}
+    article:has(#ButDuJeu) p::before {
+        content: '"';
+    }
 
-body > footer, section > footer {
-    display: none;
-}
+    article:has(#ButDuJeu) p::after {
+        content: '"';
+    }
 
-main header, .Corps {
-    border: none;
-    box-shadow: none;
-    width: 100%;
-}
+    nav, aside {
+        display: none;
+    }
 
-body > header {
-    display: none;
-}
+    .more {
+        display: flex !important;
+    }
 
-p em {
-    display: inline;
+    .more span {
+        display: none;
+    }
+
+    article {
+        page-break-inside: avoid;
+    }
+
+    body > footer, section > footer {
+        display: none;
+    }
+
+    main header, .Corps {
+        border: none;
+        box-shadow: none;
+        width: 100%;
+    }
+
+    body > header {
+        display: none;
+    }
+
+    p em {
+        display: inline;
+    }
+
+    #toggleButton{
+        display: none !important;
+    }
 }

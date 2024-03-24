@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Définition du type de contenu et de l'encodage des caractères -->
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
-    <!--<meta http-equiv="content-language" content="fr" />
-    <meta charset="utf-8" />-->
+    <!-- Définition de la vue initiale et de l'échelle sur les appareils mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Logo pour les formulaire -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0">
 
-
+    <!-- Méta-informations -->
     <meta name="author" content="Lucas BATTAGLIA"/>
+    <meta name="contact" content="Lucas.BATTAGLIA@etu.uca.fr"/>
+    <meta name="date" content="24/03/2024"/>
+
     <meta name="keywords" content="Jeux,Scout,Animation"/>
     <meta name="description"
           content="Cette page du site NAME SITE represente l'ensemble des donnees d'une activité pour animer vos sorties"/>
 
+    <!-- Feuille de style -->
     <link rel="stylesheet" href="css/styles.css"/>
     <link rel="icon" href="/img/logo.png">
+
+    <!-- Titre de l'onglet -->
     <title>NAME SITE</title>
 </head>
 <body>
@@ -33,6 +41,7 @@
                 de tout ce dont vous avez besoin pour animer avec succès vos projets auprès des enfants et des
                 adolescents dans un environnement de loisirs sécurisé et enrichissant !</p>
         </section>
+
         <section>
             <h3>Pourquoi avoir cree NOM DU SITE</h3>
             <p>L'idée de créer ce site dédié aux animateurs d'accueil collectif de mineurs (ACM) est née de mon
@@ -46,11 +55,16 @@
                 une future version du site permettra une soumission directe, nécessitant une connexion gratuite et
                 vérifiée pour garantir la qualité et la sécurité des contributions.</p>
         </section>
+
+        <!-- Liste des 3 dernier jeux (devrais etre gerer dynamiquement par un serveur) -->
         <section>
             <h3>La liste des derniers jeux ajouté sur NOM DU SITE</h3>
+            <p>La liste des derniers jeux ajoutés sur le site :</p>
+            <!-- Tableau des jeux -->
             <table>
                 <caption>Liste de jeu</caption>
                 <thead>
+                <!-- En-têtes du tableau -->
                 <tr>
                     <th>Nom Du Jeu</th>
                     <th>Effectif</th>
@@ -58,13 +72,17 @@
                     <th>Description</th>
                 </tr>
                 </thead>
+
                 <tbody>
+                <!-- Description de jeu - Sagamore -->
                 <tr>
                     <td><a href="balleAuPrisonnier.html">La balle au prisonnier</a></td>
                     <td>10 à 50 personne</td>
                     <td>8 à 18 ans</td>
                     <td>Reussir a toucher l'ensemble des joueurs de l'equipe adverse sans se faire toucher</td>
                 </tr>
+
+                <!-- Description de jeu - Catch Flag -->
                 <tr>
                     <td><a href="jeux/catchFlag.html">Catch Flag (Capture de Drapeau)</a></td>
                     <td>10 à 50 personne</td>
@@ -73,6 +91,8 @@
                         vous faire toucher ou vous devrais rentrer chez vous!
                     </td>
                 </tr>
+
+                <!-- Description de jeu - Sagamore -->
                 <tr>
                     <td><a href="jeux/Sagamore.html">Le Sagamore</a></td>
                     <td>10 à 50 personne</td>
@@ -85,26 +105,35 @@
             </table>
         </section>
     </article>
+
     <aside>
         <div id="messageLog"></div>
+        <!-- Formulaire de connection -->
         <form action="htbin/login.py" method="post" id="connexion">
             <fieldset>
                 <legend>Connexion</legend>
-
+                <!--Champ nom d'utilisateur-->
                 <label for="username">Nom d'utilisateur : </label>
                 <input name="username" id="username" type="text" required/>
 
+                <!-- Champ mots de passe -->
                 <label for="userpwd">Mots de passe : <span class="material-symbols-outlined right" id="visibility-pwd">visibility</span></label>
                 <input name="userpwd" id="userpwd" type="password" required/>
             </fieldset>
+            <!-- Bouton de soumission -->
             <input type="submit" value="Connexion">
+            <!-- Lien vers la création de compte -->
             Pas encore de compte ? <br> <a href="form.html">Cree en un</a>
         </form>
+
+        <!-- Lien vers le ChatBox et la reconnection une fois connecter-->
         <p id="connect">Lien vers la chatbox : <a href="chat.html"> ChatBox du site </a><br>
             Changer de compte : <a href="#" id="retour"> retour </a><br>
     </aside>
 </main>
+
 <header>
+    <!-- En-tête du site -->
     <a href="index.html">
         <img alt="Logo du site web" src="img/logo.png">
     </a>
@@ -114,7 +143,9 @@
         </a>
     </div>
 </header>
+
 <nav>
+    <!-- Barre de navigation -->
     <ul>
         <li><a href="index.html">home</a></li>
         <li><a href="balleAuPrisonnier.html">La Balle au Prisonnier</a></li>
@@ -124,17 +155,23 @@
         <li><a href="monParcours.html">L'auteur du site</a></li>
     </ul>
 </nav>
+
 <footer>
+    <!-- Mention -->
     <div class="mention">
         &#169; copyRigth
         <a href="mention.html">Mention Legal</a>
     </div>
+
+    <!--Contact -->
     <address>
         <img alt="Logo du site web" src="img/logo.png"/>
         Site proposer par Lucas BATTAGLIA
         <a href="mailto:lucas.battaglia@etu.uca.fr">Mail</a>
         <a href="https://www.instagram.com/battaglia1685/">Instagram</a>
     </address>
+
+    <!-- Navigation vers d'autre page-->
     <nav>
         <a href="balleAuPrisonnier.html">La Balle au prisonnier</a>
         <a href="jeux/catchFlag.html">Catch Flags (capture de drapeau)</a>
@@ -142,6 +179,7 @@
     </nav>
 </footer>
 
+<!-- Script JavaScript pour le Formulaire -->
 <script src="js/Formulaire.js" defer></script>
 </body>
 </html>
