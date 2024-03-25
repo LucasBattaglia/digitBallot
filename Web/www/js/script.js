@@ -86,7 +86,12 @@ document.getElementById('impr').addEventListener("click", function () {
 
                 // Supprime la feuille de style en cours
                 const StyleActuel = document.getElementById("mainStylesheet");
-                StyleActuel.disabled = true;
+                try {
+                    StyleActuel.disabled = true;
+                }
+                catch (e) {
+                    console.error(e);
+                }
 
                 // Crée un élément <style> et ajoute le contenu de la feuille de style
                 const styleElement = document.createElement('style');
@@ -95,7 +100,12 @@ document.getElementById('impr').addEventListener("click", function () {
 
                 window.print(); // Lance l'impression
                 styleElement.remove(); // Supprime la feuille de style après l'impression
-                StyleActuel.disabled = false;
+                try {
+                    StyleActuel.disabled = false;
+                }
+                catch (e) {
+                    console.error(e);
+                }
 
             } else {
                 console.error('Erreur lors du chargement de la feuille de style :', xhr.status);
