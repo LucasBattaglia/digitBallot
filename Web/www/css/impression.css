@@ -1,8 +1,17 @@
-/*@import url("normalize.css");*/
+/*
+Ce fichier contient des styles CSS spécifiques pour la mise en page lors de l'impression.
 
+@author Lucas BATTAGLIA
+@contact Lucas.battaglia@etu.uca.fr
+@date 24/03/2024
+*/
 
-/* Styles spécifiques pour l'impression */
 @media print {
+    /*
+    Styles spécifiques pour l'impression.
+    */
+
+    /* Réinitialise les styles de base pour l'impression. */
     body {
         background: white;
         font-family: Arial, serif;
@@ -10,6 +19,7 @@
         padding: 0.084%;
     }
 
+    /* Styles pour les titres de niveau 2. */
     h2 {
         color: rgb(0, 102, 153);
         font-size: 2em;
@@ -18,23 +28,27 @@
         font-weight: normal;
     }
 
-    .Corps h3{
+    /* Styles pour les titres de niveau 3 à l'intérieur de l'élément ayant la classe "Corps". */
+    .Corps h3 {
         color: rgb(0, 102, 153);
         font-style: normal;
         font-weight: normal;
         font-size: 1.5em;
     }
 
+    /* Styles pour l'en-tête du contenu principal. */
     main header {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
 
+    /* Masque les titres de niveau 3 à l'intérieur de l'en-tête du contenu principal. */
     main header h3 {
         display: none;
     }
 
+    /* Styles pour le contenu supplémentaire à l'intérieur de l'en-tête du contenu principal. */
     main header .more {
         text-align: left;
         display: flex;
@@ -44,34 +58,31 @@
         border: .5px solid grey;
     }
 
-    main header .more:only-child {
-        text-align: left;
-        display: flex;
-        align-items: center;
-        justify-items: center;
-        flex-wrap: wrap;
-    }
-
+    /* Styles pour les éléments enfants du contenu supplémentaire. */
     .more > * {
         width:auto;
     }
 
+    /* Affiche les titres de niveau 3 à l'intérieur du contenu supplémentaire. */
     main header .more h3 {
         display: flex;
     }
 
+    /* Styles pour un paragraphe spécifique avec l'ID "Objectif" à l'intérieur de l'article à l'intérieur de l'en-tête du contenu principal. */
     main header article h3#Objectif + p {
         text-transform: uppercase;
         font-size: 1.8em;
         color: rgb(124, 199, 36);
     }
 
+    /* Styles pour un paragraphe spécifique avec l'ID "ButDuJeu" à l'intérieur de l'article à l'intérieur de l'en-tête du contenu principal. */
     main header article:has(#ButDuJeu) p {
         font-size: 1.5em;
         font-style: italic;
         color: blue;
     }
 
+    /* Ajoute des guillemets avant et après le paragraphe dans l'article avec l'ID "ButDuJeu". */
     article:has(#ButDuJeu) p::before {
         content: '"';
     }
@@ -80,42 +91,50 @@
         content: '"';
     }
 
+    /* Cache la navigation et la barre latérale lors de l'impression. */
     nav, aside {
         display: none;
     }
 
+    /* Affiche le contenu supplémentaire lors de l'impression. */
     .more {
-        display: flex !important;
+        display: flex !important; /* Important pour passer par dessus le JS */
     }
 
+    /* Cache les éléments "span" à l'intérieur du contenu supplémentaire. */
     .more span {
         display: none;
     }
 
+    /* Évite les sauts de page à l'intérieur des articles. */
     article {
         page-break-inside: avoid;
     }
 
+    /* Cache les pieds de page en dehors de l'en-tête principal et du corps principal. */
     body > footer, section > footer {
         display: none;
     }
 
+    /* Supprime la bordure et l'ombre de l'en-tête principal et du corps principal. */
     main header, .Corps {
         border: none;
         box-shadow: none;
         width: 100%;
     }
 
+    /* Cache l'en-tête de la page. */
     body > header {
         display: none;
     }
 
+    /* Affiche les éléments "em" à l'intérieur des paragraphes. */
     p em {
         display: inline;
     }
 
-
-    #toggleButton{
-        display: none !important;
+    /* Cache le bouton. */
+    #toggleButton {
+        display: none !important; /* Important pour passer par dessus le JS */
     }
 }
