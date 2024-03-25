@@ -9,47 +9,71 @@
 
 /*********************** Formulaire de connexion *******************************/
 
-// Ajoute un écouteur d'événement au document
+// Ajoute un écouteur d'événement au chargement du document
 document.addEventListener("DOMContentLoaded", function () {
+    // Récupère le formulaire de connexion par son identifiant
     const form = document.getElementById("connexion");
 
+    // Vérifie si le formulaire existe
     if (form !== null) {
+        // Récupère l'élément HTML pour afficher les messages de connexion
         const messageLog = document.getElementById("messageLog");
 
+        // Écoute l'événement de soumission de formulaire
         form.addEventListener("submit", function (event) {
-            event.preventDefault();
+            event.preventDefault(); // Empêche l'envoi du formulaire par défaut
 
+            // Récupère les valeurs des champs d'entrée pour le nom d'utilisateur et le mot de passe
             const username = document.getElementById("username").value;
             const password = document.getElementById("userpwd").value;
 
+            // Crée un nouvel objet XMLHttpRequest pour effectuer une requête asynchrone
             const xhr = new XMLHttpRequest();
+
+            // Définit une fonction de rappel qui sera appelée chaque fois que l'état de la requête change
             xhr.onreadystatechange = function () {
+                // Vérifie si la requête est terminée
                 if (xhr.readyState === XMLHttpRequest.DONE) {
+                    // Vérifie si la réponse du serveur est réussie (statut HTTP 200)
                     if (xhr.status === 200) {
+                        // Récupère la réponse du serveur
                         const response = xhr.responseText;
+
+                        // Vérifie le contenu de la réponse pour afficher un message approprié
                         if (response.includes("Le nom d'utilisateur et le mot de passe sont invalide")) {
+                            // Affiche un message d'erreur si les informations d'identification sont invalides
                             messageLog.className = 'erreur';
                         } else {
+                            // Affiche un message de connexion réussie si les informations d'identification sont valides
                             messageLog.className = 'connecter';
+
+                            // Affiche le contenu associé à la connexion réussie, par exemple, un lien de déconnexion
                             var connect = document.getElementById("connect");
                             if (connect !== null) {
-                                form.style.display = "none";
-                                connect.style.display = "block";
+                                form.style.display = "none"; // Cache le formulaire de connexion
+                                connect.style.display = "block"; // Affiche le contenu associé à la connexion
                             }
                         }
+                        // Affiche la réponse du serveur dans l'élément prévu à cet effet
                         messageLog.textContent = response;
                     } else {
+                        // Affiche une alerte en cas d'erreur de requête HTTP
                         alert("Une erreur s'est produite lors de la requête.");
                     }
                 }
             };
+
+            // Initialise la requête avec la méthode POST et l'URL de destination
             xhr.open("POST", "htbin/login.py", true);
+
+            // Définit l'en-tête de la requête pour spécifier le type de contenu
             xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+            // Envoie la requête avec les données d'identification encodées en URL
             xhr.send("username=" + encodeURIComponent(username) + "&userpwd=" + encodeURIComponent(password));
         });
     }
 });
-
 
 /**************** Formulaire d'inscription *********************/
 
@@ -215,8 +239,8 @@ var retour = document.getElementById("retour");
 if (retour !== null) {
     retour.addEventListener("click", function () {
         // Masquage de l'élément de connexion réussie et affichage du formulaire de connexion
-        document.getElementById("connect").style.display = "none";
-        document.getElementById("connexion").style.display = "flex";
+        document.getElementById("connect").style.display = "none"; // On cache les liens lorsque on est deconnecter
+        document.getElementById("connexion").style.display = "flex"; // On affiche les lien de connection
         document.getElementById("messageLog").textContent = "Déconnecté"; // Message de déconnexion
     });
 }

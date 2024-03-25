@@ -1,20 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
+    <!-- Définition du type de contenu et de l'encodage des caractères -->
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+
+    <!-- Meta conseiller dans le cours, mais juger obsolete ou redondante par le validateur W3C -->
     <!--<meta http-equiv="content-language" content="fr" />
     <meta charset="utf-8" />-->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0">
 
+    <!-- Définition de la vue initiale et de l'échelle sur les appareils mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Méta-informations -->
     <meta name="author" content="Lucas BATTAGLIA"/>
+    <meta name="contact" content="Lucas.BATTAGLIA@etu.uca.fr"/>
+    <meta name="date" content="24/03/2024"/>
+
     <meta name="keywords" content="Jeux,Scout,Animation"/>
     <meta name="description"
-          content="Cette page du site NAME SITE represente l'ensemble des donnees d'une activité pour animer vos sorties"/>
+          content="Cette page du site La Boite à Jeux représente l'ensemble des données d'une activité pour animer vos sorties"/>
 
+    <!-- Feuille de style -->
     <link rel="stylesheet" href="css/styles.css"/>
     <link rel="icon" href="/img/logo.png">
+
+    <!-- Titre de l'onglet -->
     <title>Connexion</title>
 </head>
 <body>
@@ -22,33 +32,33 @@
     <form action="htbin/register.py" method="post" class="card colorBox">
         <fieldset>
             <legend>Inscription</legend>
-            <label for="lastname">Nom : </label>
+            <label for="lastname">Nom :</label>
             <input name="lastname" id="lastname" type="text" required/>
             <span class="material-symbols-outlined"> person </span>
             <span class="last" id="lastnameSpan"></span>
 
-            <label for="firstname">Prenom : </label>
+            <label for="firstname">Prénom :</label>
             <input name="firstname" id="firstname" type="text" required/>
             <span class="material-symbols-outlined"> person </span>
             <span class="last" id="firstnameSpan"></span>
 
-            <label for="birthdate">Date de Naissance : </label>
+            <label for="birthdate">Date de Naissance :</label>
             <input name="birthdate" id="birthdate" type="text" placeholder="jj/mm/aaaa"/>
             <span class="material-symbols-outlined">calendar_month</span>
             <span class="last" id="birthdateSpan"></span>
 
-            <label for="username">Nom d'utilisateur : </label>
+            <label for="username">Nom d'utilisateur :</label>
             <input name="username" id="username" type="text" required/>
             <span class="material-symbols-outlined" id="usernameIcon"> account_circle </span>
             <span class="last" id="usernameSpan"></span>
 
-            <label for="userpwd">Mots de passe :
+            <label for="userpwd">Mot de passe :
                 <span class="material-symbols-outlined right" id="visibility-pwd">visibility</span></label>
             <input name="userpwd" id="userpwd" type="password" required/>
             <span class="material-symbols-outlined"> lock </span>
             <span class="last" id="userpwdSpan"></span>
 
-            <label for="useremail">Adresse Mail : </label>
+            <label for="useremail">Adresse Mail :</label>
             <input name="useremail" id="useremail" type="text" required/>
             <span class="material-symbols-outlined">mail</span>
             <span class="last" id="useremailSpan"></span>
@@ -62,25 +72,25 @@
     </a>
     <div>
         <a href="index.html">
-            <h1>NAME SITE - Activite</h1>
+            <h1>La Boite à Jeux - Activité</h1>
         </a>
     </div>
 </header>
 <footer>
     <div class="mention">
-        &#169; copyRigth
-        <a href="mention.html">Mention Legal</a>
+        &#169; Droits d'auteur
+        <a href="mention.html">Mentions Légales</a>
     </div>
     <address>
         <img alt="Logo du site web" src="img/logo.png"/>
-        Site proposer par Lucas BATTAGLIA
+        Site proposé par Lucas BATTAGLIA
         <a href="mailto:lucas.battaglia@etu.uca.fr">Mail</a>
         <a href="https://www.instagram.com/battaglia1685/">Instagram</a>
     </address>
     <nav>
-        <a href="index.html">Acceuil</a>
-        <a href="balleAuPrisonnier.html">La balle aux prisonnier</a>
-        <a href="jeux/catchFlag.html">Catch Flags (capture de drapeau)</a>
+        <a href="index.html">Accueil</a>
+        <a href="balleAuPrisonnier.html">La balle aux prisonniers</a>
+        <a href="jeux/catchFlag.html">Capture de Drapeau</a>
         <a href="jeux/Sagamore.html">Sagamore</a>
     </nav>
 </footer>

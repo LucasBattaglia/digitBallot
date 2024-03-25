@@ -1,67 +1,89 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <!-- Définition du type de contenu et de l'encodage des caractères -->
     <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+
+    <!-- Meta conseiller dans le cours, mais juger obsolete ou redondante par le validateur W3C -->
     <!--<meta http-equiv="content-language" content="fr" />
     <meta charset="utf-8" />-->
+
+    <!-- Définition de la vue initiale et de l'échelle sur les appareils mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
+    <!-- Méta-informations -->
     <meta name="author" content="Lucas BATTAGLIA"/>
+    <meta name="contact" content="Lucas.BATTAGLIA@etu.uca.fr"/>
+    <meta name="date" content="24/03/2024"/>
+
     <meta name="keywords" content="Jeux,Scout,Animation"/>
     <meta name="description"
-          content="Cette page du site NAME SITE represente l'ensemble des donnees d'une activité pour animer vos sorties"/>
+          content="Cette page du site La Boite à Jeux représente l'ensemble des données d'une activité pour animer vos sorties"/>
 
-    <link id="mainStylesheet" rel="stylesheet" href="../css/styles.css"/>
-
+    <!-- Feuille de style -->
+    <link rel="stylesheet" href="css/styles.css"/>
     <link rel="icon" href="/img/logo.png">
-    <title>NAME SITE</title>
+
+    <!-- Titre de l'onglet -->
+    <title>La Boite à Jeux</title>
 </head>
 <body>
+
 <main>
     <section id="jeux">
+        <!-- Fiche de Jeu pour le Catch Flag -->
         <header>
             <h2>Catch Flag (Capture de Drapeau)</h2>
+
             <article>
-                <h3 id="Objectif">Objectif Pedagogique</h3>
+                <h3 id="Objectif">Objectif Pédagogique</h3>
                 <p>Les enfants doivent <strong>travailler en équipe</strong> pour réussir, ce qui favorise également
                     <strong>la coopération et la communication.</strong></p>
             </article>
+
             <article>
                 <h3 id="ButDuJeu">But du jeu</h3>
-                <p>En equipe, battez vous pour recuperer le drapeau d'une autre equipe. Mais attention a ne pas vous
-                    faire toucher ou vous devrais rentrer chez vous!</p>
+                <p>En équipe, battez-vous pour récupérer le drapeau d'une autre équipe. Mais attention à ne pas vous
+                    faire toucher ou vous devrez rentrer chez vous !</p>
             </article>
+
+            <!-- Information cacher que l'on peut afficher -->
             <div class="more">
                 <article>
-                    <h3 id="Age">Age</h3>
-                    <p><span>Le jeu est adapter aux enfants de </span><em>8 à 11 ans</em></p>
+                    <h3 id="Age">Âge</h3>
+                    <p><span>Le jeu est adapté aux enfants de </span><em>8 à 11 ans</em></p>
                 </article>
+
                 <article>
                     <h3 id="Effectif">Effectif</h3>
-                    <p><span>Vous pouvez jouer a ce jeu a partir de </span><em>10 personne à 50 personne</em></p>
+                    <p><span>Vous pouvez jouer à ce jeu à partir de </span><em>10 personnes à 50 personnes</em></p>
                 </article>
+
                 <article>
-                    <h3 id="Materiel">Materiels</h3>
+                    <h3 id="Materiel">Matériels</h3>
                     <ul>
                         <li>Deux drapeaux (ou des objets de couleurs différentes)</li>
                         <li>Une surface de jeu délimitée (par exemple, un terrain de soccer ou une grande pelouse)</li>
                     </ul>
                 </article>
             </div>
+
+            <!-- Bouton pour afficher les articles caché -->
             <div>
                 <a href="#" id="toggleButton">+</a>
             </div>
         </header>
+
         <div class="Corps">
             <article>
-                <h3 id="Orga">Organisation</h3>
+                <h3 id="Organisation">Organisation</h3>
                 <p>Placez un drapeau à chaque extrémité de la surface de jeu, de chaque côté.</p>
                 <p>Divisez les joueurs en deux équipes égales et désignez un côté de la surface de jeu pour chaque
                     équipe.</p>
             </article>
+
             <article>
-                <h3 id="Regle">Regle du jeu</h3>
+                <h3 id="Regle">Règle du jeu</h3>
                 <p>Les équipes doivent défendre leur propre drapeau tout en essayant de capturer le drapeau de l'équipe
                     adverse.</p>
                 <p>Si un joueur est touché par un adversaire, il doit retourner à sa propre base et toucher la base
@@ -70,60 +92,74 @@
                     partie.</p>
             </article>
         </div>
+
+        <!-- Bouton lier a la fiche de jeu -->
         <footer>
-            <a href="mailto:lucas.battaglia@etu.uca.fr?subject=Modification%20regle%20du%20jeu%20-%20Catch%20Flag">Proposer
+            <a href="mailto:lucas.battaglia@etu.uca.fr?subject=Modification%20règle%20du%20jeu%20-%20Catch%20Flag">Proposer
                 une modification</a>
-            <a href="#" id="impr">Telecharger le PDF</a>
+            <a href="#" id="impr">Imprimer les règles du jeu</a> <!-- ATTENTION: ne marche que sur le serveur (localhost en general) -->
         </footer>
     </section>
+
     <aside>
         <nav>
             <ul id="sommaire">
-                <!-- Sommaire Generer par JavaScript -->
+                <!-- Sommaire Généré par JavaScript -->
             </ul>
         </nav>
     </aside>
 </main>
 
+<!-- En-tête du site -->
 <header>
     <a href="../index.html">
         <img alt="Logo du site web" src="../img/logo.png">
     </a>
     <div>
         <a href="../index.html">
-            <h1>NAME SITE - Activite</h1>
+            <h1>La Boite à Jeux - Activité</h1>
         </a>
     </div>
 </header>
+
+<!-- Barre de navigation -->
 <nav>
     <ul>
-        <li><a href="../index.html">home</a></li>
+        <li><a href="../index.html">Accueil</a></li>
         <li><a href="../balleAuPrisonnier.html">La Balle au Prisonnier</a></li>
-        <li><a href="catchFlag.html">Catch Flags (capture de drapeau)</a></li>
-        <li><a href="Sagamore.html">Sagamore</a></li>
-        <li><a href="../mention.html">Mention Legal</a></li>
+        <li><a href="catchFlag.html">Capture de Drapeau</a></li>
+        <li><a href="Sagamore.html">Le Sagamore</a></li>
+        <li><a href="../mention.html">Mentions Légales</a></li>
         <li><a href="../monParcours.html">L'auteur du site</a></li>
     </ul>
 </nav>
+
+<!-- footer -->
 <footer>
+    <!-- Mention -->
     <div class="mention">
-        &#169; copyRigth
-        <a href="../mention.html">Mention Legal</a>
+        &#169; copyRight
+        <a href="mention.html">Mentions Légales</a>
     </div>
+
+    <!-- Contact -->
     <address>
-        <img alt="Logo du site web" src="../img/logo.png"/>
-        Site proposer par Lucas BATTAGLIA
+        <img alt="Logo du site web" src="img/logo.png"/>
+        Site proposé par Lucas BATTAGLIA
         <a href="mailto:lucas.battaglia@etu.uca.fr">Mail</a>
         <a href="https://www.instagram.com/battaglia1685/">Instagram</a>
     </address>
+
+    <!-- Navigation vers d'autres pages -->
     <nav>
-        <a href="../index.html">Acceuil</a>
-        <a href="../balleAuPrisonnier.html">La balle aux prisonnier</a>
-        <a href="Sagamore.html">Sagamore</a>
+        <a href="../index.html">Accueil</a>
+        <a href="../balleAuPrisonnier.html">La Balle au Prisonnier</a>
+        <a href="Sagamore.html">Le Sagamore</a>
     </nav>
 </footer>
 
-
+<!-- Script JavaScript pour les boutons et la barre de navigation -->
 <script src="../js/script.js" defer></script>
+
 </body>
 </html>

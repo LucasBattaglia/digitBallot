@@ -6,7 +6,11 @@
     <!-- Définition de la vue initiale et de l'échelle sur les appareils mobiles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Logo pour les formulaire -->
+    <!-- Meta conseiller dans le cours mais juger obselete ou redondante par le validateur W3C -->
+    <!--<meta http-equiv="content-language" content="fr" />
+    <meta charset="utf-8" />-->
+
+    <!-- Logo pour les formulaires -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,0,0">
 
@@ -17,21 +21,21 @@
 
     <meta name="keywords" content="Jeux,Scout,Animation"/>
     <meta name="description"
-          content="Cette page du site NAME SITE represente l'ensemble des donnees d'une activité pour animer vos sorties"/>
+          content="Cette page du site La Boite à Jeux représente l'ensemble des données d'une activité pour animer vos sorties"/>
 
     <!-- Feuille de style -->
     <link rel="stylesheet" href="css/styles.css"/>
     <link rel="icon" href="/img/logo.png">
 
     <!-- Titre de l'onglet -->
-    <title>NAME SITE</title>
+    <title>La Boite à Jeux</title>
 </head>
 <body>
 <main>
     <article>
-        <h2>Bienvenue sur NOM DU SITE</h2>
+        <h2>Bienvenue sur La Boite à Jeux</h2>
         <section>
-            <h3>Qu'est ce que NOM DU SITE</h3>
+            <h3>Qu'est-ce que La Boite à Jeux</h3>
             <p>Notre site offre une base de jeux spécialement conçue pour enrichir vos programmes d'activités et
                 dynamiser vos sessions avec les jeunes. Que vous organisiez un camp de vacances, une journée d'excursion
                 ou un séjour en plein air, notre sélection de jeux variés et adaptés à différents groupes d'âge vous
@@ -43,7 +47,7 @@
         </section>
 
         <section>
-            <h3>Pourquoi avoir cree NOM DU SITE</h3>
+            <h3>Pourquoi avoir créé La Boite à Jeux</h3>
             <p>L'idée de créer ce site dédié aux animateurs d'accueil collectif de mineurs (ACM) est née de mon
                 expérience en tant que chef Scout au <abbr title="Eclaireur et Eclaireuse de la nature">EDLN</abbr>.
                 Initialement, je gérais une collection de jeux sur Google
@@ -56,49 +60,49 @@
                 vérifiée pour garantir la qualité et la sécurité des contributions.</p>
         </section>
 
-        <!-- Liste des 3 dernier jeux (devrais etre gerer dynamiquement par un serveur) -->
+        <!-- Liste des 3 derniers jeux (devrait être géré dynamiquement par un serveur) -->
         <section>
-            <h3>La liste des derniers jeux ajouté sur NOM DU SITE</h3>
+            <h3>La liste des derniers jeux ajoutés sur La Boite à Jeux</h3>
             <p>La liste des derniers jeux ajoutés sur le site :</p>
             <!-- Tableau des jeux -->
             <table>
-                <caption>Liste de jeu</caption>
+                <caption>Liste de jeux</caption>
                 <thead>
                 <!-- En-têtes du tableau -->
                 <tr>
                     <th>Nom Du Jeu</th>
                     <th>Effectif</th>
-                    <th>Age</th>
+                    <th>Âge</th>
                     <th>Description</th>
                 </tr>
                 </thead>
 
                 <tbody>
-                <!-- Description de jeu - Sagamore -->
+                <!-- Description du jeu - La balle au prisonnier -->
                 <tr>
                     <td><a href="balleAuPrisonnier.html">La balle au prisonnier</a></td>
-                    <td>10 à 50 personne</td>
+                    <td>10 à 50 personnes</td>
                     <td>8 à 18 ans</td>
-                    <td>Reussir a toucher l'ensemble des joueurs de l'equipe adverse sans se faire toucher</td>
+                    <td>Réussir à toucher l'ensemble des joueurs de l'équipe adverse sans se faire toucher</td>
                 </tr>
 
-                <!-- Description de jeu - Catch Flag -->
+                <!-- Description du jeu - Catch Flag -->
                 <tr>
                     <td><a href="jeux/catchFlag.html">Catch Flag (Capture de Drapeau)</a></td>
-                    <td>10 à 50 personne</td>
+                    <td>10 à 50 personnes</td>
                     <td>8 à 11 ans</td>
-                    <td>En equipe, battez vous pour recuperer le drapeau d'une autre equipe. Mais attention a ne pas
-                        vous faire toucher ou vous devrais rentrer chez vous!
+                    <td>En équipe, battez-vous pour récupérer le drapeau d'une autre équipe. Mais attention à ne pas
+                        vous faire toucher, sinon vous devrez rentrer chez vous !
                     </td>
                 </tr>
 
-                <!-- Description de jeu - Sagamore -->
+                <!-- Description du jeu - Le Sagamore -->
                 <tr>
                     <td><a href="jeux/Sagamore.html">Le Sagamore</a></td>
-                    <td>10 à 50 personne</td>
+                    <td>10 à 50 personnes</td>
                     <td>11 à 18 ans</td>
-                    <td>En equipe, battez vous pour capurer le sorciers d'une autre equipe. Mais attention a ne pas vous
-                        faire toucher ou vous devrais rentrer chez vous recuperer des vies!
+                    <td>En équipe, battez-vous pour capturer le sorcier d'une autre équipe. Mais attention à ne pas vous
+                        faire toucher, sinon vous devrez rentrer chez vous pour récupérer des vies !
                     </td>
                 </tr>
                 </tbody>
@@ -108,70 +112,71 @@
 
     <aside>
         <div id="messageLog"></div>
-        <!-- Formulaire de connection -->
+        <!-- Formulaire de connexion -->
         <form action="htbin/login.py" method="post" id="connexion">
             <fieldset>
                 <legend>Connexion</legend>
-                <!--Champ nom d'utilisateur-->
+                <!-- Champ nom d'utilisateur -->
                 <label for="username">Nom d'utilisateur : </label>
                 <input name="username" id="username" type="text" required/>
 
                 <!-- Champ mots de passe -->
-                <label for="userpwd">Mots de passe : <span class="material-symbols-outlined right" id="visibility-pwd">visibility</span></label>
+                <label for="userpwd">Mot de passe : <span class="material-symbols-outlined right" id="visibility-pwd">visibility</span></label>
                 <input name="userpwd" id="userpwd" type="password" required/>
             </fieldset>
             <!-- Bouton de soumission -->
             <input type="submit" value="Connexion">
             <!-- Lien vers la création de compte -->
-            Pas encore de compte ? <br> <a href="form.html">Cree en un</a>
+            Pas encore de compte ? <br> <a href="form.html">Créez-en un</a>
         </form>
 
-        <!-- Lien vers le ChatBox et la reconnection une fois connecter-->
-        <p id="connect">Lien vers la chatbox : <a href="chat.html"> ChatBox du site </a><br>
-            Changer de compte : <a href="#" id="retour"> retour </a><br>
+        <!-- Lien vers la ChatBox et la reconnexion une fois connecté -->
+        <p id="connect">Lien vers la ChatBox : <a href="chat.html"> ChatBox du site </a><br>
+            Changer de compte : <a href="#" id="retour">retour</a><br></p>
     </aside>
 </main>
 
+<!-- En-tête du site -->
 <header>
-    <!-- En-tête du site -->
     <a href="index.html">
         <img alt="Logo du site web" src="img/logo.png">
     </a>
     <div>
         <a href="index.html">
-            <h1>NAME SITE</h1>
+            <h1>La Boite à Jeux</h1>
         </a>
     </div>
 </header>
 
+<!-- Barre de navigation -->
 <nav>
-    <!-- Barre de navigation -->
     <ul>
-        <li><a href="index.html">home</a></li>
-        <li><a href="balleAuPrisonnier.html">La Balle au Prisonnier</a></li>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="balleAuPrisonnier.html">La Balle au prisonnier</a></li>
         <li><a href="jeux/catchFlag.html">Catch Flags (capture de drapeau)</a></li>
         <li><a href="jeux/Sagamore.html">Sagamore</a></li>
-        <li><a href="mention.html">Mention Legal</a></li>
+        <li><a href="mention.html">Mentions Légales</a></li>
         <li><a href="monParcours.html">L'auteur du site</a></li>
     </ul>
 </nav>
 
+<!-- footer -->
 <footer>
     <!-- Mention -->
     <div class="mention">
-        &#169; copyRigth
-        <a href="mention.html">Mention Legal</a>
+        &#169; copyRight
+        <a href="mention.html">Mentions Légales</a>
     </div>
 
-    <!--Contact -->
+    <!-- Contact -->
     <address>
         <img alt="Logo du site web" src="img/logo.png"/>
-        Site proposer par Lucas BATTAGLIA
+        Site proposé par Lucas BATTAGLIA
         <a href="mailto:lucas.battaglia@etu.uca.fr">Mail</a>
         <a href="https://www.instagram.com/battaglia1685/">Instagram</a>
     </address>
 
-    <!-- Navigation vers d'autre page-->
+    <!-- Navigation vers d'autres pages -->
     <nav>
         <a href="balleAuPrisonnier.html">La Balle au prisonnier</a>
         <a href="jeux/catchFlag.html">Catch Flags (capture de drapeau)</a>
@@ -179,7 +184,9 @@
     </nav>
 </footer>
 
-<!-- Script JavaScript pour le Formulaire -->
+<!-- Script JavaScript pour le formulaire -->
 <script src="js/Formulaire.js" defer></script>
+
 </body>
 </html>
+
