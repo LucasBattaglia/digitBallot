@@ -28,18 +28,30 @@
     <title>La Boite à Jeux - ChatBox</title>
 </head>
 <body>
+
 <main>
     <section class="chatbox">
         <h2 id="titreChat">ChatBox</h2>
-        <span id="messageLog"></span>
+
+        <span id="messageLog">
+            <!-- Emplacement pour afficher l'état des requêtes HTTP sur le serveur par javascript -->
+        </span>
+
         <form id="Chat" action="htbin/chatsend.py" method="post">
+
             <label for="msg">Votre message</label>
             <textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+
             <input type="submit" value="Envoyer">
         </form>
-        <div id="messageChat"></div>
+
+        <div id="messageChat">
+            <!-- Boite pour afficher les messages envoyés sur le chat -->
+        </div>
     </section>
 </main>
+
+<!-- En-tête du site -->
 <header>
     <a href="index.html">
         <img alt="Logo du site web" src="img/logo.png">
@@ -50,6 +62,8 @@
         </a>
     </div>
 </header>
+
+<!-- Barre de navigation -->
 <nav>
     <ul>
         <li><a href="index.html">Accueil</a></li>
@@ -60,17 +74,24 @@
         <li><a href="monParcours.html">L'auteur du site</a></li>
     </ul>
 </nav>
+
+<!-- footer -->
 <footer>
+    <!-- Mention -->
     <div class="mention">
-        &#169; Droits d'auteur
+        &#169; copyRight
         <a href="mention.html">Mentions Légales</a>
     </div>
+
+    <!-- Contact -->
     <address>
         <img alt="Logo du site web" src="img/logo.png"/>
         Site proposé par Lucas BATTAGLIA
         <a href="mailto:lucas.battaglia@etu.uca.fr">Mail</a>
         <a href="https://www.instagram.com/battaglia1685/">Instagram</a>
     </address>
+
+    <!-- Navigation vers d'autres pages -->
     <nav>
         <a href="balleAuPrisonnier.html">La Balle au prisonnier</a>
         <a href="jeux/catchFlag.html">Capture de Drapeau</a>
@@ -78,6 +99,8 @@
     </nav>
 </footer>
 
+<!-- Script JavaScript pour l'envoie et la reception des messages -->
 <script src="js/ChatBox.js" defer></script>
+
 </body>
 </html>

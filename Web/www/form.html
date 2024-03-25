@@ -28,10 +28,13 @@
     <title>Connexion</title>
 </head>
 <body>
+
 <main>
+    <!-- Formulaire d'inscription -->
     <form action="htbin/register.py" method="post" class="card colorBox">
         <fieldset>
             <legend>Inscription</legend>
+
             <label for="lastname">Nom :</label>
             <input name="lastname" id="lastname" type="text" required/>
             <span class="material-symbols-outlined"> person </span>
@@ -52,8 +55,10 @@
             <span class="material-symbols-outlined" id="usernameIcon"> account_circle </span>
             <span class="last" id="usernameSpan"></span>
 
-            <label for="userpwd">Mot de passe :
-                <span class="material-symbols-outlined right" id="visibility-pwd">visibility</span></label>
+            <label for="userpwd">
+                Mot de passe :
+                <span class="material-symbols-outlined right" id="visibility-pwd">visibility</span> <!-- Logo pour cacher et montrer le mot de passe -->
+            </label>
             <input name="userpwd" id="userpwd" type="password" required/>
             <span class="material-symbols-outlined"> lock </span>
             <span class="last" id="userpwdSpan"></span>
@@ -62,10 +67,15 @@
             <input name="useremail" id="useremail" type="text" required/>
             <span class="material-symbols-outlined">mail</span>
             <span class="last" id="useremailSpan"></span>
+
         </fieldset>
+
         <input type="submit" value="S'inscrire" id="submitBtn" disabled/>
+
     </form>
 </main>
+
+<!-- En-tête du site -->
 <header>
     <a href="index.html">
         <img alt="Logo du site web" src="img/logo.png">
@@ -76,17 +86,24 @@
         </a>
     </div>
 </header>
+
+<!-- footer -->
 <footer>
+    <!-- Mention -->
     <div class="mention">
-        &#169; Droits d'auteur
+        &#169; copyRight
         <a href="mention.html">Mentions Légales</a>
     </div>
+
+    <!-- Contact -->
     <address>
         <img alt="Logo du site web" src="img/logo.png"/>
         Site proposé par Lucas BATTAGLIA
         <a href="mailto:lucas.battaglia@etu.uca.fr">Mail</a>
         <a href="https://www.instagram.com/battaglia1685/">Instagram</a>
     </address>
+
+    <!-- Navigation vers d'autres pages -->
     <nav>
         <a href="index.html">Accueil</a>
         <a href="balleAuPrisonnier.html">La balle aux prisonniers</a>
@@ -95,6 +112,7 @@
     </nav>
 </footer>
 
+<!-- Script JavaScript pour le formulaire -->
 <script src="js/Formulaire.js" defer></script>
 
 </body>
