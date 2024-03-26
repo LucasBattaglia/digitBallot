@@ -1,17 +1,17 @@
 /*
-    Nom du fichier: styles.css
+Ce fichier contient les styles CSS pour le site web NAME SITE.
 
-    Auteur: Lucas BATTAGLIA
-    Contact: lucas.battaglia@etu.uca.fr
-    Date de création: 24 mars 2024
-
-    Description: Ce fichier contient les styles CSS pour le site web NAME SITE.
+@author Lucas BATTAGLIA
+@contact Lucas.battaglia@etu.uca.fr
+@date 24/03/2024
 */
 
+/* Importe la feuille de style normalize.css pour normaliser les styles entre les navigateurs. */
 @import url("normalize.css");
 
 /************ Definition des couleurs ********************************/
 
+/* Définition des variables de couleur */
 :root {
     --fond: rgb(245 245 245);
     --section-fond: rgb(255 255 255);
@@ -25,6 +25,7 @@
     --thead: rgb(0 255 255);
 }
 
+/* Styles pour le mode sombre */
 @media (prefers-color-scheme: dark) {
     :root {
         --fond: rgb(20, 20, 20);
@@ -39,14 +40,16 @@
         --thead: rgb(0, 139, 139);
     }
 
+    /* Styles pour les liens dans l'élément aside en mode sombre */
     aside a {
-        color: rgb(255, 255, 255); /* Couleur des liens dans l'élément aside */
+        color: rgb(255, 255, 255);
     }
 }
 
 
 /************ Remise dans l'ordre voulu des elements html ************/
 
+/* Définition de l'ordre et de la position des éléments HTML */
 body {
     display: flex;
     flex-direction: column;
@@ -70,6 +73,7 @@ footer {
 }
 
 /************ Partout ************/
+/* Styles généraux applicables partout */
 html {
     background-color: var(--fond);
 }
@@ -84,6 +88,7 @@ a {
 }
 
 /************ header ************/
+/* Styles pour l'en-tête */
 body > header {
     display: block;
     background-color: var(--vert);
@@ -94,17 +99,20 @@ body > header {
     height: 50px;
 }
 
+/* Styles pour le logo dans l'en-tête */
 body > header div {
     display: block;
     text-align: center;
     margin-top: -50px;
 }
 
+/* Styles pour l'image du logo dans l'en-tête */
 body > header img {
     width: 50px;
     height: 50px;
 }
 
+/* Styles pour le titre dans l'en-tête */
 body > header h1 {
     display: inline;
     text-align: center;
@@ -113,6 +121,7 @@ body > header h1 {
     font-family: cursive;
 }
 
+/* Styles pour les liens dans l'en-tête */
 body > header a {
     text-decoration: none;
 }
@@ -122,20 +131,16 @@ body > header a {
 }
 
 /************ nav ************/
-
+/* Styles pour la navigation */
 body > nav a {
     transition: filter 300ms;
+    text-decoration: none;
+    color: var(--couleur-lien);
 }
 
 body > nav:hover a,
 body > nav:focus a {
     color: var(--defaut);
-}
-
-
-body > nav a {
-    text-decoration: none;
-    color: var(--couleur-lien);
 }
 
 body > nav a:focus,
@@ -164,21 +169,25 @@ body > nav li {
 }
 
 /************ main Page Activite ************/
+/* Styles pour la section principale des fiches activités*/
 body > main {
     display: flex;
 }
 
+/* Styles pour les sections */
 body > main > section {
     margin: 10px;
     border-radius: 5px;
     width: 75vw;
 }
 
+/* Styles pour les titres dans les sections */
 body > main > section header div {
     display: flex;
     justify-content: center;
 }
 
+/* Styles pour les liens dans les titres des sections */
 body > main > section header a {
     display: inline-block;
     width: 50px;
@@ -192,6 +201,7 @@ body > main > section header a {
     transform: translate(0%, 50%);
 }
 
+/* Styles pour le contenu supplémentaire */
 .more {
     display: flex;
     border-top: 1px solid var(--gris);
@@ -199,23 +209,27 @@ body > main > section header a {
     flex-flow: row wrap;
 }
 
+/* Styles pour les articles du contenu supplémentaire*/
 .more article {
     padding: 20px;
 }
 
+/* Styles pour les element ayant une ombre */
 main header, .Corps, .card, .chatbox {
     background-color: var(--section-fond);
     border-radius: 10px;
-    box-shadow: 0px 3px 15px var(--defaut);
+    box-shadow: 0 3px 15px var(--defaut);
     padding: 10px;
     margin: 20px;
 }
 
+/* Styles pour le pied de page */
 main footer {
     display: flex;
     justify-content: space-around;
 }
 
+/* Styles pour la navigation dans la section à droite */
 body > main > aside > nav {
     padding: 10px;
     display: flex;
@@ -223,6 +237,7 @@ body > main > aside > nav {
     width: 20vw;
 }
 
+/* Styles pour la section à droite */
 body > main > aside {
     background-color: var(--aside);
     border-radius: 5px;
@@ -230,13 +245,14 @@ body > main > aside {
     text-align: center;
     height: auto;
     width: 20vw;
-    box-shadow: 0px 3px 15px var(--defaut);
+    box-shadow: 0 3px 15px var(--defaut);
 }
 
 body > main > aside p{
     min-width: 0;
 }
 
+/* Styles pour les listes dans la section à droite */
 aside ul {
     list-style: none;
     text-decoration: none;
@@ -246,21 +262,18 @@ aside ul {
 }
 
 /************ main Autre Page ************/
-
+/* Styles pour les autres pages */
 body > main > article {
     background-color: var(--section-fond);
-    border-radius: 10px;
-    box-shadow: 0px 3px 15px var(--defaut);
+    border-radius:10px;
+    box-shadow: 0 3px 15px var(--defaut);
     padding: 10px;
     margin: 20px;
 }
 
 /*********** Formulaire ************/
 
-main:has(form) {
-    justify-content: center;
-}
-
+/* Styles pour les formulaires */
 form {
     display: flex;
     flex-direction: column;
@@ -268,29 +281,40 @@ form {
     width: 100%;
 }
 
+
+main:has(form) {
+    justify-content: center;
+}
+
+/* Styles pour les paragraphes dans les formulaires */
 form p {
     width: 100%;
 }
 
+/* Styles pour la boite des elements une fois connecter */
 #connect {
     display: none;
     text-align: center;
 }
 
+/* Styles pour les boites de champs de saisie */
 fieldset {
     display: flex;
     flex-direction: column;
     width: auto;
 }
 
+/* Styles pour les champs de saisie */
 input {
     width: 100%;
 }
 
+/* Styles pour le bouton de soumission */
 input[type="submit"] {
     width: 50%;
 }
 
+/* Styles pour les messages de retour du serveur*/
 #messageLog {
     margin: 10px;
     padding: 5px;
@@ -299,6 +323,7 @@ input[type="submit"] {
     display: none;
 }
 
+/* Styles pour les messages d'erreur */
 .erreur {
     text-align: center;
     color: rgb(255 255 255);
@@ -306,6 +331,7 @@ input[type="submit"] {
     display: block !important; /* On utilise le important pour passer par dessus le JS*/
 }
 
+/* Styles pour les utilisateurs connectés (ou sans erreur) */
 .connecter {
     text-align: center;
     color: rgb(255 255 255);
@@ -313,6 +339,7 @@ input[type="submit"] {
     display: block !important; /* On utilise le important pour passer par dessus le JS*/
 }
 
+/* Styles pour le formulaire d'inscription */
 .card {
     position: relative;
     align-items: center;
@@ -323,6 +350,7 @@ input[type="submit"] {
     overflow: hidden;
 }
 
+/* Styles pour les pseudo-éléments du formulaire d'inscription (fond vert en haut de la carte) */
 .card::before,
 .card::after {
     content: '';
@@ -336,6 +364,7 @@ input[type="submit"] {
     top: -41%;
 }
 
+/* Styles pour les champs dans le formulaire d'inscription */
 .card fieldset {
     border: none;
     width: 100%;
@@ -343,15 +372,13 @@ input[type="submit"] {
     padding: 10px;
 }
 
-.card * {
-    z-index: 1;
-}
-
+/* Styles pour les légendes dans le formulaire d'inscription */
 .card fieldset legend {
     font-size: 300%;
     font-weight: bold;
 }
 
+/* Styles pour les champs de saisie dans le formulaire d'inscription */
 .card fieldset input {
     width: auto;
     height: 40px;
@@ -362,6 +389,7 @@ input[type="submit"] {
     padding-left: 40px;
 }
 
+/* Styles pour le bouton de soumission dans le formulaire d'inscription */
 .card input[type="submit"] {
     margin: 0 0 30px 0;
     width: 60%;
@@ -369,6 +397,7 @@ input[type="submit"] {
     background: var(--fond);
 }
 
+/* Styles pour les icônes des formulaire */
 .material-symbols-outlined {
     position: relative;
     font-family: 'Material Symbols Outlined', serif;
@@ -378,12 +407,14 @@ input[type="submit"] {
     height: 0;
 }
 
+/* Styles pour l'oeil du mots de passe */
 .right {
     position: absolute;
     cursor: pointer;
     transform: translate(0, 0);
 }
 
+/* Styles pour les boite de message d'erreur des champs (dernier élément) */
 .last {
     color: rgb(255 0 0);
     margin-bottom: 5%;
@@ -391,17 +422,21 @@ input[type="submit"] {
 }
 
 /*********** ChatBox ************/
+/* Styles pour la boîte de chat */
 #messageChat {
     max-height: 80vh;
     overflow-y: scroll;
 }
 
+/* Styles pour la zone de texte */
 textarea {
     resize: none;
     width: 50%;
     height: 100px;
 }
 
+/*** Les class si dessous sont cree par JavaScript */
+/* Styles pour les messages */
 .DivMessage {
     display: flex;
     flex-direction: column;
@@ -410,40 +445,48 @@ textarea {
     overflow-wrap: break-word;
 }
 
+/* Styles pour les auteurs des messages */
 .DivMessage:nth-child(2n+1) {
     background-color: var(--gris);
 }
 
+/* Styles pour les messages */
 .DivMessage:nth-child(2n+2) {
     background-color: var(--section-fond);
 }
 
+/* Styles pour les auteurs */
 .spanAuteur {
     font-size: 1.2em;
     font-weight: bold;
 }
 
+/* Styles pour les dates */
 .spanDate {
     font-size: 0.8em;
     color: rgb(128 128 128);
     text-decoration: underline;
 }
 
+/* Styles pour les messages */
 .spanMessage {
     margin: 10px;
 }
 
+/* Styles pour la boîte de chat */
 .chatbox {
     min-width: 225px;
     max-width: 700px;
 }
 
+/* Styles pour le titre du chat */
 #titreChat {
     text-align: center;
 }
 
 /*********** footer *************/
 
+/* Styles pour le pied de page */
 body > footer {
     background-color: var(--footer);
     display: flex;
@@ -452,17 +495,20 @@ body > footer {
     margin-top: 30px;
 }
 
+/* Styles pour les éléments du pied de page */
 body > footer * {
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
+/* Styles pour les images du pied de page */
 body > footer img {
     height: 50px;
     width: 50px;
 }
 
+/* Styles pour l'adresse du pied de page */
 body > footer address {
     display: flex;
     flex-direction: column;
@@ -472,42 +518,52 @@ body > footer address {
 
 /************* tableau ***********/
 
+/* Styles pour la légende du tableau */
 table caption {
     visibility: hidden;
 }
 
+/* Styles pour l'en-tête du tableau */
 thead {
     background-color: var(--thead);
 }
 
-/******************************************
-***            Media Queries            ***
-******************************************/
+/************************************************************************************
+***********************            Media Queries            *************************
+************************************************************************************/
 
+/* Media queries pour les écrans de 825px */
 @media screen and (max-width: 825px) {
+    /* Styles pour la direction de la section principale sans formulaire */
     main:not(:has(> form)) {
         flex-direction: column-reverse;
     }
 
+    /* Styles pour ajuster la largeur des fiche de jeux */
     #jeux {
         width: auto;
     }
 
+    /* Styles pour ajuster la marge et la largeur de la section à droite */
     body > main > aside {
         margin: 10px 30px 10px 30px;
         width: auto;
     }
 
+    /* Styles pour masquer les éléments span dans .more */
     .more span {
         display: none;
     }
 }
 
+/* Media queries pour les écrans de moins de 640px */
 @media screen and (max-width: 640px) {
+    /* Styles pour la disposition du pied de page */
     body > footer {
         flex-direction: column;
     }
 
+    /* Styles pour le lien vers les mentions légales */
     body > footer .mention {
         order: 3;
         display: flex;
@@ -519,53 +575,65 @@ thead {
         margin-left: 1em;
     }
 
+    /* Styles pour l'adresse dans le pied de page */
     body > footer address {
         order: 1;
         margin-bottom: 20px;
     }
 
+    /* Styles pour la navigation dans le pied de page */
     body > footer nav {
         order: 2;
         text-align: center;
         margin-bottom: 20px;
     }
 
+    /* Styles pour supprimer les ombres sur certains éléments */
     main header, .Corps, .card, main article {
         box-shadow: none;
     }
 
+    /* Styles pour masquer les liens dans les en-têtes de section */
     body > main > section header a {
         display: none;
     }
 
+    /* Styles pour forcer l'affichage des éléments .more */
     .more {
         display: flex !important; /* On utilise le important pour passer par dessus le JS*/
     }
-
 }
 
+/* Media queries pour les écrans de moins de 520px */
 @media screen and (max-width: 520px) {
+    /* Styles pour la disposition des éléments de navigation */
     body > nav ul {
         flex-direction: column;
     }
 
+    /* Styles pour masquer l'image dans l'en-tête */
     body > header img {
         display: none;
     }
 
+    /* Styles pour réinitialiser la marge du div dans l'en-tête */
     body > header div {
-        margin: 0px;
+        margin: 0;
     }
 }
 
+/* Media queries pour les écrans de moins de 1200px */
 @media screen and (max-width: 1200px) {
+    /* Styles pour la disposition de la section principale contenant un formulaire (dans le index.html) */
     main:has(aside form) {
         flex-direction: column-reverse;
     }
 
+    /* Styles pour l'élément aside contenant un formulaire (dans le index.html)*/
     main aside:has(form) {
         margin: 10px 30px 10px 30px;
         width: auto;
     }
 }
+
 
